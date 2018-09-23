@@ -12,7 +12,7 @@ class BaseTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    public var identifier: String! {
+    static var identifier: String! {
         get {
             return "\(self.typeName(self))"
         }
@@ -20,16 +20,14 @@ class BaseTableViewCell: UITableViewCell {
     
     // MARK: - Functions
     
-    private func typeName(_ some: Any) -> String {
+    private static func typeName(_ some: Any) -> String {
         return (some is Any.Type) ? "\(some)" : "\(type(of: some))"
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.separatorInset = UIEdgeInsets(top: 0, left: 50.0, bottom: 0, right: 0)
-        self.backgroundColor = .white
-        self.accessoryType = .disclosureIndicator
+        self.separatorInset = UIEdgeInsets(top: 0, left: 15000, bottom: 0, right: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {

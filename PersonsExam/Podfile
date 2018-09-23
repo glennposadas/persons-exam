@@ -11,13 +11,18 @@ inhibit_all_warnings!
   target 'PersonsExam' do
     
     pod 'EFInternetIndicator',  '0.4.0'           # Reachability
-    pod 'Kingfisher',           '4.10.0'          # Image loading with built-in caching system.
+    pod 'Kingfisher',           '4.8.1'           # Image loading with built-in caching system.
     pod 'Moya',                 '11.0.2'          # Networking Abstraction Layer
-    pod 'SnapKit',              '4.0.1'           # Constraint Programmatically.
+    pod 'SnapKit',              '4.0.0'           # Constraint Programmatically.
     pod 'SwiftyJSON',           '4.1.0'           # Parsing of JSON Data
+    pod 'SwiftMessages',        '5.0.1'           # View controller presentation library used by EFInternetIndicator
    
-    pod 'RxSwift',              '4.3.1'           # Reactive/Functional Programming Framework
-    pod 'RxCocoa',              '4.3.1'           # Reactive/Functional Programming Framework
+    pod 'RxSwift',              '4.2.0'           # Reactive/Functional Programming Framework
+    pod 'RxCocoa',              '4.2.0'           # Reactive/Functional Programming Framework
+
+    target 'PersonsExamTests' do
+        inherit! :search_paths
+    end
 
     post_install do |installer|
         installer.pods_project.targets.each do |target|
@@ -26,8 +31,8 @@ inhibit_all_warnings!
             end
         end
     end
-
   end
+
 
   target 'PersonsExamUITests' do
 

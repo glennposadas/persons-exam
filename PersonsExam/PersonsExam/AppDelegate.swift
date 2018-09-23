@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Setup root screen.
         
-        let deliveriesController = DeliveriesViewController()
-        let navigationController = UINavigationController(rootViewController: deliveriesController)
+        let personsViewController = PersonsViewController()
+        let navigationController = UINavigationController(rootViewController: personsViewController)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

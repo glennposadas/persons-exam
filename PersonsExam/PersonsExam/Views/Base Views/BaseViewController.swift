@@ -14,7 +14,6 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
     
     public typealias PersonsExamAlertCallBack = (_ userDidTapOk: Bool) -> Void
-    
     public var internetConnectionIndicator: InternetViewIndicator?
     
     // MARK: - Functions
@@ -26,15 +25,15 @@ class BaseViewController: UIViewController {
         // Add some more common configurations here...
         
         self.view.backgroundColor = .white
-        self.navigationController?.navigationBar.tintColor = .darkBlue
-        self.navigationController?.navigationBar.backItem?.title = ""
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         
         // For reachability
         // Change the remoteHostName if necessary...
         // Suppose the mock api is on a real server...
         
         self.startMonitoringInternet(
-            backgroundColor: .darkBlue,
+            backgroundColor: .blueTheme,
             style: .statusLine,
             textColor: .white,
             message: "Oops! Please check your internet connection! 🤦‍♂️",

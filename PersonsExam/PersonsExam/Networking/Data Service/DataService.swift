@@ -1,5 +1,5 @@
 //
-//  DeliveryService.swift
+//  DataService.swift
 //  PersonsExam
 //
 //  Created by Glenn Von C. Posadas on 23/09/2018.
@@ -11,28 +11,28 @@ import EFInternetIndicator
 import Moya
 import SwiftyJSON
 
-let deliveryServiceProvider = MoyaProvider<DeliveryService>(plugins: [CachePolicyPlugin()])
+let dataServiceProvider = MoyaProvider<DataService>(plugins: [CachePolicyPlugin()])
 
-enum DeliveryService {
-    case getDeliveries()
+enum DataService {
+    case getPersons()
 }
 
 // MARK: - TargetType Protocol Implementationm
 
-extension DeliveryService: TargetType {
+extension DataService: TargetType {
     var baseURL: URL {
-        return URL(string: "http://localhost:8080")!
+        return URL(string: "https://glennposadas.github.io/jsons")!
     }
     
     var path: String {
         switch self {
-        case .getDeliveries: return "/deliveries"
+        case .getPersons: return "/persons.json"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getDeliveries: return .get
+        case .getPersons: return .get
         }
     }
     
@@ -42,7 +42,7 @@ extension DeliveryService: TargetType {
     
     var task: Task {
         switch self {
-        case .getDeliveries: return .requestPlain
+        case .getPersons: return .requestPlain
         }
     }
     
@@ -53,10 +53,10 @@ extension DeliveryService: TargetType {
 
 // MARK: - CatchePolicyGettable
 
-extension DeliveryService: CachePolicyGettable {
+extension DataService: CachePolicyGettable {
     var cachePolicy: URLRequest.CachePolicy {
         switch self {
-        case .getDeliveries: return .useProtocolCachePolicy
+        case .getPersons: return .useProtocolCachePolicy
         }
     }
 }
