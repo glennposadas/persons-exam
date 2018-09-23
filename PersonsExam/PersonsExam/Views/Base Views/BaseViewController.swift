@@ -16,6 +16,20 @@ class BaseViewController: UIViewController {
     public typealias PersonsExamAlertCallBack = (_ userDidTapOk: Bool) -> Void
     public var internetConnectionIndicator: InternetViewIndicator?
     
+    internal lazy var tableView: BaseTableView = {
+        let tableView = BaseTableView(frame: .zero, style: .plain)
+        return tableView
+    }()
+    
+    internal lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = .clear
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.keyboardDismissMode = .interactive
+        return scrollView
+    }()
+    
     // MARK: - Functions
     // MARK: Overrides
     

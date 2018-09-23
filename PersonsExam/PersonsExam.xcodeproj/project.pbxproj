@@ -30,6 +30,7 @@
 		45B6CCFA2157A99A00502F4A /* CoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B6CCF92157A99A00502F4A /* CoreService.swift */; };
 		45B6CCFD2157BBAA00502F4A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B6CCFC2157BBAA00502F4A /* APIManager.swift */; };
 		45B6CD002157C89500502F4A /* PersonViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B6CCFF2157C89500502F4A /* PersonViewerViewController.swift */; };
+		45B6CD022157CB2200502F4A /* PersonViewerViewController+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B6CD012157CB2200502F4A /* PersonViewerViewController+SetupUI.swift */; };
 		45EC25052156C7B60071C489 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EC25042156C7B60071C489 /* PersonsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		45B6CCF92157A99A00502F4A /* CoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreService.swift; sourceTree = "<group>"; };
 		45B6CCFC2157BBAA00502F4A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		45B6CCFF2157C89500502F4A /* PersonViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewerViewController.swift; sourceTree = "<group>"; };
+		45B6CD012157CB2200502F4A /* PersonViewerViewController+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonViewerViewController+SetupUI.swift"; sourceTree = "<group>"; };
 		45EC25042156C7B60071C489 /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
 		6A025233485303634C5A3DA7 /* Pods-PersonsExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonsExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersonsExam/Pods-PersonsExam.release.xcconfig"; sourceTree = "<group>"; };
 		704C23748897CEBC5992A0EA /* Pods-PersonsExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonsExam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PersonsExam/Pods-PersonsExam.debug.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				45B6CCFF2157C89500502F4A /* PersonViewerViewController.swift */,
+				45B6CD012157CB2200502F4A /* PersonViewerViewController+SetupUI.swift */,
 			);
 			path = "Person Viewer";
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				45025A022156B0720010389B /* BaseTableView.swift in Sources */,
 				4572045921579CF800C00932 /* UIViewController+PersonsExam.swift in Sources */,
 				45B6CD002157C89500502F4A /* PersonViewerViewController.swift in Sources */,
+				45B6CD022157CB2200502F4A /* PersonViewerViewController+SetupUI.swift in Sources */,
 				450259F72156B0720010389B /* CachePolicyPlugin.swift in Sources */,
 				4553861C2157531C0074230F /* PersonsViewController+SetupUI.swift in Sources */,
 				4553861F2157547B0074230F /* Person.swift in Sources */,

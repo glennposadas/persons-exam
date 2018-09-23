@@ -17,12 +17,7 @@ class PersonsViewController: BaseViewController {
     
     private var viewModel: PersonsViewModel!
     private let disposeBag = DisposeBag()
-    
-    internal lazy var tableView: BaseTableView = {
-        let tableView = BaseTableView(frame: .zero, style: .plain)
-        return tableView
-    }()
-    
+        
     // MARK: - Functions
     
     private func setupBindings() {
@@ -37,7 +32,8 @@ class PersonsViewController: BaseViewController {
     }
     
     private func showPersonDetails(_ person: Person) {
-        
+        let personViewerViewController = PersonViewerViewController(person)
+        self.navigationController?.pushViewController(personViewerViewController, animated: true)
     }
     
     // MARK: Overrides

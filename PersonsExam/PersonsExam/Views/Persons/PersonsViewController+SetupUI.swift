@@ -11,11 +11,8 @@ import UIKit
 
 extension PersonsViewController {
     internal func setupUI() {
+        // Layout goes here...
         self.title = "Persons"
-        
-        self.view.addSubview(self.tableView)
-        self.tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        self.addTableView()
     }
 }

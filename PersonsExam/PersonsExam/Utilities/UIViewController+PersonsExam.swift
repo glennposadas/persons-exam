@@ -28,6 +28,43 @@ extension UIViewController {
         self.navigationItem.titleView = titleLabel
     }
     
+    /// Adds a scrollView and attached it as a subview for ```LLFViewController``` subclassing controllers.
+    /// Adds as well a clear view that serves as a stretcher for the scrollView's width.
+    /// Param ```shouldExtendToTopEdge``` - If true, top is equalToSuperView. Otherwise, set to 64.0
+    public func addScrollView(shouldExtendToTopEdge: Bool = true) {
+        guard let baseVC = self as? BaseViewController else { return }
+        baseVC.view.addSubview(baseVC.scrollView)
+        baseVC.scrollView.snp.makeConstraints {
+            $0.leading.trailing.bottom.equalToSuperview()
+            if shouldExtendToTopEdge {
+                $0.top.equalToSuperview()
+            } else {
+                // Can be a one liner, but this is just an experiment.
+                // We could use ```constraintToTop```.
+                $0.top.equalToSuperview().inset(64.0)
+            }
+        }
+        
+        let container = UIView()
+        container.backgroundColor = .clear
+        baseVC.scrollView.addSubview(container)
+        container.snp.makeConstraints {
+            $0.height.equalTo(1.0)
+            $0.centerY.equalToSuperview()
+            $0.width.equalTo(UIScreen.main.bounds.width)
+            $0.leading.trailing.equalToSuperview()
+        }
+    }
+    
+    func addTableView() {
+        guard let baseVC = self as? BaseViewController else { return }
+        baseVC.view.addSubview(baseVC.tableView)
+        baseVC.tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+
+    
     /**
      Presents an alertController with completion.
      - parameter title: The title of the alert.
